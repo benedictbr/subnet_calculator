@@ -2,7 +2,6 @@
 
 .inputGrid {
 	justify-content: center;
-	width: 100%;
 }
 .inputForm {
 	width: 100%;
@@ -18,7 +17,20 @@
 	border-radius: 4px;
 }
 .subnet-info {
-	padding-left: 4rem;
-	padding-right: 4rem;
-	border-bottom: 1px solid black;
+	margin-left: 4rem;
+	margin-right: 4rem;
+	margin-top: 3rem;
+	padding: 1rem;
+	border: 1px solid black;
+	border-radius: 8px;
+	background-color: azure;
+}
+.subnet-info:hover {
+	border: 2px solid greenyellow;
+}
+.results {
+	margin-top: 3rem;
+	margin-right: 3.5rem;
+	margin-left: 3.5rem;
+	border-top: 2px dotted black;
 }

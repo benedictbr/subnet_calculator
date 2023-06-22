@@ -52,22 +52,24 @@ function InputGrid({ names }) {
 					Submit
 				</button>
 			</form>
-			{subnets.map((subnet, index) => {
-				return subnet?.empty === "true" ? null : (
-					<div className='subnet-info'>
-						<h3>{`Subnet #${index + 1}`}</h3>
-						<h4>
-							Network Address: <span style={{ fontWeight: "bolder" }}>{subnet.networkAddress}</span>
-						</h4>
-						<h4>
-							Broadcast Address: <span style={{ fontWeight: "bolder" }}>{subnet.broadcastAddress}</span>
-						</h4>
-						<h4>
-							Subnet Mask: <span style={{ fontWeight: "bolder" }}>{subnet.subnetMask}</span>
-						</h4>
-					</div>
-				);
-			})}
+			<div className='results'>
+				{subnets.map((subnet, index) => {
+					return subnet?.empty === "true" ? null : (
+						<div className='subnet-info'>
+							<h3>{`Subnet #${index + 1}`}</h3>
+							<h4>
+								Network Address: <span style={{ fontWeight: "bolder" }}>{subnet.networkAddress}</span>
+							</h4>
+							<h4>
+								Broadcast Address: <span style={{ fontWeight: "bolder" }}>{subnet.broadcastAddress}</span>
+							</h4>
+							<h4>
+								Subnet Mask: <span style={{ fontWeight: "bolder" }}>{subnet.subnetMask}</span>
+							</h4>
+						</div>
+					);
+				})}
+			</div>
 		</div>
 	);
 }
